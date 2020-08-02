@@ -1,0 +1,52 @@
+.input-group {
+    width: auto;
+    padding: 3px 23px 3px 3px;
+    border: 1px solid $gray;
+    margin-left: auto;
+    .input-group-prepend,
+    .input-group-append {
+        position: absolute;
+        right: 3px;
+        z-index: 3;
+        button {
+            min-width: unset!important;
+            width: 14px;
+            height: 9px;
+            border-radius: unset!important;
+            padding: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $gray;
+            i{
+                font-size: 12px;
+                line-height: 1;
+            }
+        }
+    }
+    .input-group-prepend {
+        top: 3px;
+        margin-right: unset;
+        i{
+            position: relative;
+            top:2px
+        }
+    }
+    .input-group-append {
+        bottom: 3px;
+        margin-left: unset;
+        i{
+            position: relative;
+            bottom:2px
+        }
+    }
+    input {
+        width: 19px!important;
+        height: 18px!important;
+        padding: unset;
+        border: unset;
+        font-size: 16px;
+        font-weight: 400;
+        color:$gray-color-2;
+    }
+}

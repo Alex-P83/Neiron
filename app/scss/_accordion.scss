@@ -1,0 +1,201 @@
+.accordion {
+    .orders {
+        &__node {
+            border-bottom: 1px solid $gray;
+            &:first-child {
+                border-top: 1px solid $gray;
+            }
+        }
+        &__node-header {
+            display: flex;
+            padding: 20px;
+            cursor: pointer;
+            .orders {
+                &__code {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $blue-light;
+                    i {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $blue-light;
+                        transition: 0.3s;
+                        margin-right: 10px;
+                    }
+                }
+                &__date {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $gray-color-2;
+                }
+                &__count {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $gray-color-2;
+                }
+                &__cost {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $gray-color-2;
+                    strong {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            &.active {
+                background-color: rgba($blue-light, 0.1);
+                .orders {
+                    &__code {
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+        &__body {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-column-gap: 30px;
+        }
+        &__code {
+            width: 115px;
+            flex-shrink: 0;
+        }
+        &__date {
+            width: 200px;
+        }
+        &__count {
+            width: 160px;
+        }
+        &__cost {
+            width: 180px;
+        }
+        &__status {
+            color: $green;
+            font-size: 16px;
+            font-weight: 700;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+    }
+    // Product
+    .rewievs {
+        padding-bottom: 30px;
+        &__title {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            padding: 20px 0;
+            border-top: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            &.active {
+                i.fa-chevron-down {
+                    transform: rotate(180deg);
+                }
+            }
+            i.fa-chevron-down {
+                font-size: 40px;
+                color: $gray;
+                margin-left: auto;
+                transition: 0.3s;
+            }
+            .stars{
+                font-size: 18px;
+                color:$gray-color-1;
+                margin:0 15px 0 30px;
+            }
+            .rating{
+                font-size: 14px;
+                font-weight: 400;
+                color:$gray-color-1;
+            }
+        }
+        &__counter{
+            font-size: 30px;
+            font-weight: 700;
+            color:$black-color-1;
+            margin-bottom: 0;
+        }
+        &__item {
+            margin: 20px 0 35px;
+            &-info {
+                display: flex;
+                align-items: baseline;
+                justify-content: flex-start;
+                margin-bottom: 20px;
+                .name {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: $black-color-1;
+                    margin-right: 20px;
+                }
+                .date {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $gray-color-1;
+                }
+                .rating {
+                    margin-left: auto;
+                    display: flex;
+                    align-items: baseline;
+                    justify-content: space-between;
+                    .stars {
+                        font-size: 14px;
+                        font-weight: 400;                        
+                        color: $gray-color-1;
+                    }
+                    .rating-num {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $gray-color-1;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .comment {
+                position: relative;
+                padding: 25px;
+                border: 1px solid $gray;
+                &:before {
+                    width: 0;
+                    height: 0;
+                    border-bottom: 11px solid $gray;
+                    border-left: 22px solid transparent;
+                    border-right: 22px solid transparent;
+                    position: absolute;
+                    top: -11px;
+                    left: 19px;
+                    content: "";
+                }
+                &:after {
+                    width: 0;
+                    height: 0;
+                    border-bottom: 10px solid $white;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    position: absolute;
+                    top: -10px;
+                    left: 21px;
+                    content: "";
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 1.2;
+                    color: $black-color-1;
+                    font-weight: 400;
+                    margin: unset;
+                }
+            }
+        }
+        a{
+            width: 202px;
+            height: 54px;
+            font-size: 20px;
+            font-weight: 400;
+            color:$white;
+        }
+    }
+}

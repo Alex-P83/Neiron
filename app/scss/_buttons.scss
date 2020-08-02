@@ -1,0 +1,39 @@
+.b_t_n{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color:$white;
+    padding: .375rem .75rem;
+    text-align: center;
+    &.blueBtn{
+        background: $blue-light;
+        color:$white;
+        &:hover{
+            text-decoration: none;
+            background: lighten($blue-light,10%);
+        }
+    }
+    &.redBtn{
+        background: $red;
+        color:$white;
+        &:hover{
+            text-decoration: none;
+            background: lighten($red,10%);
+        }
+    }
+    &.transparentBtn{
+        color: $blue-light;
+        background-color:none;
+        border:1px solid $blue-light;
+        border-radius: 10px;
+        padding: 15px 35px;
+        &:hover{
+            text-decoration: none;
+        }        
+    }
+}
